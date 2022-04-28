@@ -1,0 +1,27 @@
+<h1>Meu ovo esquerdo</h1>
+{{ nome }}
+
+<ol>
+{% for item in lista_tecs %}
+    {% if item == "Django" %}
+        <li>
+            <b>
+                {{ item }}
+            </b>
+        </li>
+    {% else %}
+        <li>
+            {{ item }}
+        </li>
+    {% endif %}
+{% endfor %}
+</ol>
+
+{% for post in posts %}
+    <h2>{{ post }}</h2>
+    <h3>{{ post.sub_title }}</h3>
+    <p>{{ post.text }}</p>
+    <Hr>
+{% endfor %}
+
+    
