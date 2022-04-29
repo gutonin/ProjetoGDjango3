@@ -33,3 +33,11 @@ class Post(models.Model):
     def get_category_label(self):
         return self.get_category_display()
 
+
+class Contact(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name

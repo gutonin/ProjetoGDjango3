@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from website.models import Contact, Post
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -16,3 +16,4 @@ class PostAdmin(admin.ModelAdmin):
         return Post.objects.filter(deleted=False)
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Contact)
