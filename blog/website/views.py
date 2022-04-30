@@ -15,7 +15,6 @@ def home_blog(request):
     return render(request, 'index.html', context)
 
 def post_detail(request, id):
-    print('salve')
     post = Post.objects.filter(id=id).first()
     context = {
         'post': post,
